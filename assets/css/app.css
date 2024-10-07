@@ -1,0 +1,247 @@
+@import url(normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --gs-header-bgc: #13183f;
+  --text-color: #83869a;
+  --feature-get-started: #f74780;
+  --linear-gradient-main: linear-gradient(to bottom, #ff6f48, #f02aa6);
+}
+
+body {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+
+}
+
+header {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+header a {
+  color: white;
+  background-color: var(--gs-header-bgc);
+  text-decoration: none;
+  text-align: center;
+  padding: 16px;
+  border-radius: 32px;
+  font-weight: 700;
+  animation: btnSize 5s infinite ease-in-out;
+}
+
+header a:hover {
+  opacity: 0.5;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 44px;
+}
+
+.get-started-main {
+  color: white;
+  background: var(--linear-gradient-main);
+  text-decoration: none;
+  text-align: center;
+  padding: 16px;
+  border-radius: 32px;
+  font-weight: 700;
+  width: 150px;
+  animation: btnSize 5s infinite ease-in-out;
+}
+
+.get-started-main:hover {
+  opacity: 0.5;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+}
+
+.main-description {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 20px;
+}
+
+.description {
+  width: 70%;
+  line-height: 24px;
+}
+
+.title {
+  display: inline-block;
+  font-size: 56px;
+}
+
+.typed-out{
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  width: 0;
+  animation: 
+    typing 1s steps(20, end) forwards infinite;
+}
+
+.main-image {
+  margin-right: auto;
+  margin-left: auto;
+  background: var(--linear-gradient-main);
+  border-radius: 158px;
+  padding-bottom: 16px;
+  height: 483px;
+}
+
+.main-image img {
+  border-radius: 158px;
+}
+
+p {
+  color: var(--text-color);
+}
+
+.features-cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-bottom: 32px;
+  margin-left: 32px;
+}
+
+.features-cards-bottom {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-top: 32px;
+  margin-left: 32px;
+}
+
+.popular-feature {
+  background: var(--linear-gradient-main);
+  border-radius: 15px;
+  width: 15%;
+  padding: 32px;
+}
+
+.popular-feature p {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 15px;
+  box-shadow: 0px 25px 50px 0px rgba(6, 22, 141, 0.04);
+  width: 15%;
+  padding: 32px;
+  background-color: white;
+  gap: 20px;
+}
+
+.feature {
+  color: black;
+  font-weight: 800;
+  font-size: 24px;
+  animation: flyText 5s ease-in infinite;
+}
+
+.feature-description {
+  line-height: 24px;
+}
+
+.feature-get-started {
+  color: var(--feature-get-started);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+footer {
+  padding: 16px;
+  background-color: var(--gs-header-bgc);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer a {
+  color: white;
+  background-color: var(--gs-header-bgc);
+  text-decoration: none;
+  text-align: center;
+  padding: 16px;
+  border-radius: 32px;
+  font-weight: 700;
+}
+
+footer a:hover {
+  opacity: 0.5;
+}
+
+@keyframes flyText {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(50%);
+  }
+
+  0% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes btnSize {
+  0% {
+    transform: scale(0.3);
+  }
+
+  25% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(0.3);
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
